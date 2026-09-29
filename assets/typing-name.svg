@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="600" height="80" viewBox="0 0 600 80"
+     role="img" aria-labelledby="title description">
+  <title id="title">Hi, I'm Adam Le</title>
+  <desc id="description">Adam Le is typed one character at a time beside a blinking cursor. The full name is shown when reduced motion is requested.</desc>
+
+  <!-- Self-contained: no scripts, remote fonts, images, or tracking. -->
+  <style>
+    .still { display: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .motion { display: none; }
+      .still { display: inline; }
+    }
+  </style>
+
+  <defs>
+    <!-- Mid-tone colors remain legible on light and dark backgrounds. -->
+    <linearGradient id="name-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#238da8" />
+      <stop offset="55%" stop-color="#657fd1" />
+      <stop offset="100%" stop-color="#9370c7" />
+    </linearGradient>
+    <clipPath id="name-reveal" clipPathUnits="userSpaceOnUse">
+      <!-- A full base width also leaves a readable name in static renderers. -->
+      <rect id="reveal-window" x="305.6" y="8" width="176.4" height="64">
+        <animate attributeName="width" dur="10s" repeatCount="indefinite"
+                 calcMode="discrete" keyTimes="0;0.03;0.042;0.054;0.066;0.078;0.09;0.102;0.114;0.92;0.926;0.932;0.938;0.944;0.95;0.956;0.962;1"
+                 values="0;0;25.2;50.4;75.6;100.8;126;151.2;176.4;176.4;151.2;126;100.8;75.6;50.4;25.2;0;0" />
+      </rect>
+    </clipPath>
+  </defs>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
+     font-size="42" font-weight="600">
+    <text x="104" y="56" textLength="176.4" lengthAdjust="spacingAndGlyphs" fill="#7d8590">Hi, I'm</text>
+
+    <g class="motion">
+      <text x="305.6" y="56" textLength="176.4" lengthAdjust="spacingAndGlyphs"
+            fill="url(#name-gradient)" clip-path="url(#name-reveal)">Adam Le</text>
+      <rect id="typing-cursor" x="486" y="23" width="3" height="37"
+            rx="1.5" fill="#238da8">
+        <animate attributeName="x" dur="10s" repeatCount="indefinite"
+                 calcMode="discrete" keyTimes="0;0.03;0.042;0.054;0.066;0.078;0.09;0.102;0.114;0.92;0.926;0.932;0.938;0.944;0.95;0.956;0.962;1"
+                 values="309.6;309.6;334.8;360;385.2;410.4;435.6;460.8;486;486;460.8;435.6;410.4;385.2;360;334.8;309.6;309.6" />
+        <animate attributeName="opacity" dur="1.2s" repeatCount="indefinite"
+                 calcMode="discrete" keyTimes="0;0.5;1" values="1;0;1" />
+      </rect>
+    </g>
+
+    <text class="still" x="305.6" y="56" textLength="176.4" lengthAdjust="spacingAndGlyphs"
+          fill="url(#name-gradient)">Adam Le</text>
+  </g>
+</svg>

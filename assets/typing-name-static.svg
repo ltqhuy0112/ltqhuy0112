@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="600" height="80" viewBox="0 0 600 80"
+     role="img" aria-labelledby="title description">
+  <title id="title">Hi, I'm Adam Le</title>
+  <desc id="description">Static greeting: Hi, I'm Adam Le. No animation.</desc>
+
+  <!-- Self-contained: no scripts, remote fonts, images, or tracking. -->
+
+  <defs>
+    <!-- Mid-tone colors remain legible on light and dark backgrounds. -->
+    <linearGradient id="name-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#238da8" />
+      <stop offset="55%" stop-color="#657fd1" />
+      <stop offset="100%" stop-color="#9370c7" />
+    </linearGradient>
+  </defs>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
+     font-size="42" font-weight="600">
+    <text x="104" y="56" textLength="176.4" lengthAdjust="spacingAndGlyphs" fill="#7d8590">Hi, I'm</text>
+
+
+    <text x="305.6" y="56" textLength="176.4" lengthAdjust="spacingAndGlyphs"
+          fill="url(#name-gradient)">Adam Le</text>
+  </g>
+</svg>
